@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/vhanumap/PS_Test/PSTest/PSTest_xunit",
-      "program": "c:/Users/vhanumap/PS_Test/PSTest/PSTest_xunit/build/Debug/outDebug",
+      "cwd": "c:/Users/vhanumap/PS_Test/PSTest/build",
+      "program": "c:/Users/vhanumap/PS_Test/PSTest/build/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

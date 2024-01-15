@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(FuelConsumptionTest)
+
+# Set path to Google Test library
+set(GTEST_DIR "path/to/gtest" CACHE PATH "C:/googletest-main/googletest-main/build/lib/Debug")
+
+# Include directories
+include_directories(src)
+
+# Add your source files
+add_executable(FuelConsumptionTest src/FuelConsumption.cpp src/FuelConsumptionTest.cpp)
+
+# Locate GTest
+find_package(GTest REQUIRED)
+
+# Include directories for GTest
+include_directories(${GTEST_INCLUDE_DIRS})
+
+# Add your source files for GTest
+add_executable(FuelConsumptionTestGTest src/FuelConsumptionGTest.cpp)
+
+# Link GTest and your code
+target_link_libraries(FuelConsumptionTestGTest ${GTEST_BOTH_LIBRARIES})
+
+# Set the output directory for the executables
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/build)
+
