@@ -42,3 +42,29 @@ private:
     int year;
     double fuelConsumed;
 };
+int main() {
+    // Creating a car object
+    Car myCar("Gasoline", 2025, 10.5);
+
+    // Displaying initial information
+    std::cout << "Initial Car Information:\n";
+    myCar.displayInfo();
+
+    // Calculating fuel efficiency (with mathematical defect)
+    try {
+        double efficiency = myCar.calculateFuelEfficiency();
+        std::cout << "Calculated Fuel Efficiency: " << efficiency << " km/l\n";
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << "\n";
+    }
+
+    // Calculating fuel efficiency (with intentional runtime error)
+    try {
+        double efficiencyWithError = myCar.calculateFuelEfficiencyWithRuntimeError();
+        std::cout << "Calculated Fuel Efficiency with Runtime Error: " << efficiencyWithError << " km/l\n";
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << "\n";
+    }
+
+    return 0;
+}
